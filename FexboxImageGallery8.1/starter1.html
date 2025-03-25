@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flexbox Gallery</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--width to match device's screen, initial scale prevents zooming on mobile devices-->
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #FEFEFE;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        /* notes for explaining display: flex; → Enables Flexbox for the .gallery div.
+flex-wrap: wrap; → Allows images to wrap onto new lines if space runs out.
+justify-content: center; → Centers the images in the container.
+gap: 10px; → Adds 10px space between images.
+padding: 20px; → Adds space around the gallery.*/
+
+        .gallery img {
+            width: 30%;
+            max-width: 300px;
+            height: auto;
+        }
+        
+
+    
+        @media (max-width: 768px) {
+            .gallery img {
+                width: 45%; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery img {
+                width: 100%; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Flexbox Gallery</h1>
+    </header>
+    <main>
+        <div class="gallery">
+            <img src="bird1.jpg" alt="Placeholder 1">
+            <img src="bird2.jpg" alt="Placeholder 2">
+            <img src="bird3.jpg" alt="Placeholder 3">
+            <img src="bird4.jpg" alt="Placeholder 4">
+            <img src="bird5.jpg" alt="Placeholder 5">
+            <img src="bird6.jpg" alt="Placeholder 6">
+        </div>
+    </main>
+</body>
+</html>
